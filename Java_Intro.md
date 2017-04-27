@@ -2,20 +2,20 @@ IT Circle
 University of Colombo - Faculty of Science
 
 Email: jeewantha.janith@gmail.com
-&nbsp;
+
 # Java - Intro
 
-&nbsp;
+
 ### Environment:
  - Java JDK 7/8 (And make sure PATH is set)
  - A text editor (Notepad, gedit...)
  - Netbeans for GUI development with Swing
-&nbsp;
+
 ### Introduction: 
  - Initiated by James Gosling 
  - 1st release in 1995
  - Originally developed by Sun Microsystems - now owned by Oracle
-&nbsp;
+
 ### Hello World
 
 ```java
@@ -67,7 +67,7 @@ About Java programs, it is very important to keep in mind the following points.
     *Example: Assume ```MyFirstJavaProgram``` is the class name. Then the file should be saved as ```MyFirstJavaProgram.java```*
 
  - *```public static void main(String args[])``` − Java program processing starts from the ```main()``` method which is a mandatory part of every Java program*
-&nbsp;
+
 ### Comments in Java
 
 ```java
@@ -95,12 +95,12 @@ public class MyFirstJavaProgram {
    }
 }
 ```
-&nbsp;
+
 ### Data Types
 
  - Primitive Data Types
  - Reference/Object Data Types
-&nbsp;
+
 ##### Primitive Data Types
 &nbsp;
 ![Data Types](http://java2learn.com/wp-content/uploads/2013/08/cmpdatatypes.png)
@@ -143,9 +143,9 @@ public class Test {
    }
 }
 ```
-&nbsp;
+
 ##### Reference Data Types
-&nbsp;
+
 ```java
 Ball b1 = new Ball();
 Ball b2;
@@ -218,7 +218,7 @@ public class Employee {
    }
 }
 ```
-&nbsp;
+
 ### Methods
 ![Methods](http://1.bp.blogspot.com/-qQ21fDfuMio/Tr0WAupgg3I/AAAAAAAAAvg/ezUcgTi0tcs/w1200-h630-p-k-no-nu/java_method.jpg)
 &nbsp;
@@ -228,7 +228,7 @@ public class Employee {
  - **Class/Static variables** : *Declared with the ```static``` keyword in a class, but outside a method, constructor or a block* 
 
 #### Class Variables Example
-&nbsp;
+
 ```java
 import java.io.*;
 public class Employee {
@@ -248,7 +248,7 @@ public class Employee {
 *If the variables are accessed from an outside class, the constant should be accessed as*
 ```Employee.DEPARTMENT```
 ### Try this
-&nbsp;
+
 ```java
 public class Employee {
 
@@ -308,9 +308,9 @@ public class EmployeeTest {
 ```
 &nbsp;
 ### Basic Constructs
-&nbsp;
+
 #### Conditional Statements
-&nbsp;
+
 ```java
 if( x < 20 ) {
     System.out.print("This is if statement");
@@ -361,9 +361,9 @@ switch(grade) {
         System.out.println("Invalid grade");
 }
 ```
-&nbsp;
+
 #### Repetition
-&nbsp;
+
 ```java
 int x = 10;
 
@@ -396,7 +396,7 @@ do {
     System.out.print("\n");
 }while( x < 20 );
 ```
-&nbsp;
+
 ### Arrays
 *A fixed-size sequential collection of elements of the same type*
 
@@ -406,11 +406,70 @@ double[] myList;   // preferred way.
 double myList[];   // works but not preferred way.
 ```
 **Initializing**
+```
+        dataType[] arrayRefVar = new dataType[arraySize];
+        dataType[] arrayRefVar = {value0, value1, ..., valuek};
+```
+```java
+double[] myList = new double[10];
+double[] myList = {1.9, 2.9, 3.4, 3.5};
+```
 
-dataType[] arrayRefVar = new dataType[arraySize];
-dataType[] arrayRefVar = {value0, value1, ..., valuek};
+![java array](https://www.tutorialspoint.com/java/images/java_array.jpg)
 
+```java
+public class TestArray {
 
+   public static void main(String[] args) {
+      double[] myList = {1.9, 2.9, 3.4, 3.5};
 
+      // Print all the array elements
+      for (int i = 0; i < myList.length; i++) {
+         System.out.println(myList[i] + " ");
+      }
+     
+      // Summing all elements
+      double total = 0;
+      for (int i = 0; i < myList.length; i++) {
+         total += myList[i];
+      }
+      System.out.println("Total is " + total);
+      
+      // Finding the largest element
+      double max = myList[0];
+      for (int i = 1; i < myList.length; i++) {
+         if (myList[i] > max) max = myList[i];
+      }
+      System.out.println("Max is " + max);  
+   }
+}
+```
+
+### Exceptions
+*An exception (or exceptional event) is a problem that arises during the execution of a program*
+*An exception can occur for many different reasons. Some are :*
+ - A user has entered an invalid data
+ - A file that needs to be opened cannot be found
+ - Devide by zero
+
+Some built in Exceptions in Java API
+ - ArithmeticException
+ - ArrayIndexOutOfBoundsException
+ - NullPointerException
+
+#### Handling an exceptional event
+
+```java
+    int a[] = new int[2];
+    try {
+        System.out.println("Access element three :" + a[3]);
+    }catch(ArrayIndexOutOfBoundsException e) {
+        System.out.println("Exception thrown  :" + e);
+    }finally {
+        a[0] = 6;
+        System.out.println("First element value: " + a[0]);
+        System.out.println("The finally statement is executed");
+    }
+```
 
 
