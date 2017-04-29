@@ -55,7 +55,7 @@ Email: jeewantha.janith@gmail.com
     
     Now start drawing...
 
-![Calc](images/alcdesign.png)
+![Calc](images/calcdesign.png)
 
     Let's start coding
     
