@@ -12,7 +12,7 @@ Email: jeewantha.janith@gmail.com
 
 &nbsp;
 
-### Let's build a simple Celsius to Fahrenheit converter
+### Let's build a simple Celcius to Fahrenheit converter
 
 
 *You are going to build this:*
